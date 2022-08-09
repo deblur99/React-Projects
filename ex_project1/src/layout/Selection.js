@@ -1,41 +1,35 @@
 import React from "react";
 
-import "./Selection.css";
-
-import scissor from "../res/scissor.png";
+import scissors from "../res/scissors.png";
 import rock from "../res/rock.png";
 import paper from "../res/paper.png";
-import makeDecision from "../utils/makeDecision";
 
-const Selection = () => {
-  const onClickSelectBtn = () => {
-    console.log("clicked!!");
-  };
+const select_list = {
+  scissors: {
+    name: "scissors",
+    src: scissors,
+  },
+  rock: {
+    name: "rock",
+    src: rock,
+  },
+  paper: {
+    name: "paper",
+    src: paper,
+  },
+};
+
+const Panel = (props) => {
   return (
-    <div id="selection">
+    <div>
       <img
-        id="scissor"
+        id="scissors"
         className="select_item"
-        src={scissor}
-        alt="scissor"
-        onClick={onClickSelectBtn}
-      ></img>
-      <img
-        id="rock"
-        className="select_item"
-        src={rock}
-        alt="rock"
-        onClick={onClickSelectBtn}
-      ></img>
-      <img
-        id="paper"
-        className="select_item"
-        src={paper}
-        alt="paper"
-        onClick={onClickSelectBtn}
+        src={select_list[props.name].src}
+        alt="scissors"
       ></img>
     </div>
   );
 };
 
-export default Selection;
+export default Panel;

@@ -1,0 +1,22 @@
+/* display: flex 속성은 따로따로 적용해 줘야 한다.. 이유는 나도 잘 모르겠다.... */
+article {
+  height: 30rem;
+  display: flex;
+  border: 1px solid blue;
+  margin: 15px 10px;
+}
+
+footer #selections {
+  margin: 8px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer #result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
