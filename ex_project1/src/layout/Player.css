@@ -1,0 +1,26 @@
+/* 내부 요소에서 flex 속성값 새로 적용 */
+/* align-items, justify-content 모두 적용 */
+/* 두 요소는 외부 요소에서 적용해야 한다. */
+/* align-items : 가로축  */
+/* justify-content : 세로축 */
+.player {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 20px 10px;
+  border: 2px solid brown;
+}
+
+.player #player_name {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.player img {
+  margin-top: 50px;
+  width: 90%;
+  height: 60%;
+}
