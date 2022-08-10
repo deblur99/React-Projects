@@ -1,5 +1,8 @@
 import react, { useEffect, useState } from "react";
 import "./App.css";
+import WeatherBox from "./component/WeatherBox";
+import WeatherButton from "./component/WeatherButton";
+
 import getWeatherData from "./utils/GetWeatherData";
 
 function App() {
@@ -7,7 +10,12 @@ function App() {
     console.log(getWeatherData());
   }, []);
 
-  return <div className="App"></div>;
+  return (
+    <div>
+      <WeatherBox />
+      <WeatherButton />
+    </div>
+  );
 }
 
 export default App;
