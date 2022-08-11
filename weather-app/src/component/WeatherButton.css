@@ -1,0 +1,18 @@
+.button {
+  background-color: floralwhite;
+  margin: 0 2px;
+  border: 0.8px solid grey;
+  border-radius: 2px;
+}
+
+.button#current-loc {
+  background-color: orange;
+}
+
+.button:active {
+  background-color: blanchedalmond;
+}
+
+.button#current-loc:active {
+  background-color: blanchedalmond;
+}

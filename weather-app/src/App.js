@@ -1,19 +1,24 @@
 import react, { useEffect, useState } from "react";
 import "./App.css";
-import WeatherBox from "./component/WeatherBox";
-import WeatherButton from "./component/WeatherButton";
 
 import getWeatherData from "./utils/GetWeatherData";
 
+import WeatherBox from "./component/WeatherBox";
+import WeatherButton from "./component/WeatherButton";
+
 function App() {
-  useEffect(() => {
-    console.log(getWeatherData());
-  }, []);
+  const [weatherState, setWeatherState] = useState(null);
+
+  // const weather = getWeatherData();
+
+  // setWeatherState(weather);
 
   return (
     <div>
-      <WeatherBox />
-      <WeatherButton />
+      <div className="container">
+        <WeatherBox weather={weatherState} />
+        <WeatherButton />
+      </div>
     </div>
   );
 }
